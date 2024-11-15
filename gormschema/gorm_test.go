@@ -4,11 +4,12 @@ import (
 	"os"
 	"testing"
 
+	"github.com/kyle-okami/atlas-provider-gorm/gormschema"
+
 	"ariga.io/atlas-go-sdk/recordriver"
-	"ariga.io/atlas-provider-gorm/gormschema"
-	ckmodels "ariga.io/atlas-provider-gorm/internal/testdata/circularfks"
-	"ariga.io/atlas-provider-gorm/internal/testdata/customjointable"
-	"ariga.io/atlas-provider-gorm/internal/testdata/models"
+	ckmodels "github.com/kyle-okami/atlas-provider-gorm/internal/testdata/circularfks"
+	"github.com/kyle-okami/atlas-provider-gorm/internal/testdata/customjointable"
+	"github.com/kyle-okami/atlas-provider-gorm/internal/testdata/models"
 	"github.com/stretchr/testify/require"
 	"gorm.io/gorm"
 )

@@ -5,7 +5,7 @@ import (
 
 	"gorm.io/gorm"
 
-	"ariga.io/atlas-provider-gorm/gormschema"
+	"github.com/kyle-okami/atlas-provider-gorm/gormschema"
 )
 
 type Person struct {

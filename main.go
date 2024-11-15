@@ -20,7 +20,7 @@ import (
 	"github.com/alecthomas/kong"
 	"golang.org/x/tools/go/packages"
 
-	"ariga.io/atlas-provider-gorm/gormschema"
+	"github.com/kyle-okami/atlas-provider-gorm/gormschema"
 )
 
 var (
