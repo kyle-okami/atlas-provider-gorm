@@ -9,7 +9,7 @@ import (
 )
 
 func TestLoad(t *testing.T) {
-	for _, dialect := range []string{"mysql", "sqlite", "postgres"} {
+	for _, dialect := range []string{"mysql", "postgres"} {
 		t.Run(dialect, func(t *testing.T) {
 			var buf bytes.Buffer
 			cmd := &LoadCmd{

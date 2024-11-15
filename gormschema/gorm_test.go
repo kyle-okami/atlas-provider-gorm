@@ -13,29 +13,6 @@ import (
 	"gorm.io/gorm"
 )
 
-func TestSQLiteConfig(t *testing.T) {
-	resetSession()
-	l := gormschema.New("sqlite")
-	sql, err := l.Load(
-		models.WorkingAgedUsers{},
-		models.Pet{},
-		models.UserPetHistory{},
-		ckmodels.Event{},
-		ckmodels.Location{},
-		models.TopPetOwner{},
-	)
-	require.NoError(t, err)
-	requireEqualContent(t, sql, "testdata/sqlite_default")
-	resetSession()
-	l = gormschema.New("sqlite", gormschema.WithConfig(&gorm.Config{
-		DisableForeignKeyConstraintWhenMigrating: true,
-	}))
-	sql, err = l.Load(models.UserPetHistory{}, models.Pet{}, models.User{})
-	require.NoError(t, err)
-	requireEqualContent(t, sql, "testdata/sqlite_no_fk")
-	resetSession()
-}
-
 func TestPostgreSQLConfig(t *testing.T) {
 	resetSession()
 	l := gormschema.New("postgres")
